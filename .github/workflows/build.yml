@@ -1,0 +1,59 @@
+name: Build LaTeX and Python
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-latex:
+    name: Compile LaTeX notes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Compile week 01 LaTeX file
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: notes/week01/week01.tex
+
+  check-python:
+    name: Check Python assignments
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pytest
+
+      - name: Check Python syntax
+        run: |
+          if [ -d assignments ]; then
+            python -m compileall assignments
+          else
+            echo "No assignments folder found."
+          fi
+
+      - name: Run tests if they exist
+        run: |
+          if [ -d tests ]; then
+            pytest
+          else
+            echo "No tests folder found, skipping tests."
+          fi
