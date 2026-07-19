@@ -1,0 +1,76 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\title{Week 1}
+\author{Raadhikka Gupta}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Foundations in Generative AI}
+
+\subsection{Generative AI process}
+\begin{itemize}
+    \item Data Input: AI model is given a large amount of data (images, sounds, text, and numbers)
+    \item Training: AI model analyzes this data and looks for relationship between information. The \textbf{neural network} is trained on a dataset on the examples of \textbf{outputs}.
+    \item Output: AI model generates new outputs by inputting a \textbf{random seed value}. It processes the seed value and generates new output based on the patterns learnt. 
+\end{itemize}
+
+\subsection{AI-assisted Development}
+\begin{itemize}
+    \item Building the Foundation
+    \item Solving problems
+    \item Safety Checks
+    \item Documentation
+    \item Refining and polishing
+\end{itemize}
+In all cases where AI is used, humans always double-check and ensure that the output produced by the AI is valid and doesn't cause any errors to the whole program.
+
+\subsection{Large Language Models}
+\begin{itemize}
+    \item \textbf{Generative AI}: Training the model on TBs of data, (example) then asking it to generate the next word of a sentence/phrase
+    \item \textbf{Foundational Model}: It is a type of Generative AI, that are trained on large amounts of data, and it is used as a base for a variety of different tasks
+    \item \textbf{Large Language Model}: It is a type of Foundational Model, to understand and process human text. They are used for chatbots as they predict the next word in a sequence based on linguistic patterns. Examples: Claude, Gemini, GPT
+    \item \textbf{Vision}: It is a type of Foundational Model, to analyze and understand visual data. It has pre-trained ML models for visual tasks like object classificaton, object detection, and image segmentation. 
+    \item \textbf{Tuning}: The process of taking a trained model and training it more to make it more specific. Making it personalized for your use case, and giving it custom rules, tones, and data to its core behaviour.
+    \item \textbf{Prompt Engineering}: To give instructions to an AI Model to generate an output.
+\end{itemize}
+
+\subsubsection{How LLMs are trained?}
+\begin{itemize}
+    \item \textbf{Exposed to dataset}: Given billions of pages from different sources that provides a foundational knowledge needed for training.
+    \item \textbf{Pattern Recognition}: Identifies patterns in language like grammar, meaning, and context; by predicting the next word in a sequence of text.
+    \item \textbf{Fine-tuning and iteration}: Repeated iterations and applications of algorithms allows it to generate output that are contextually appropriate and human-like.
+\end{itemize}
+
+\subsubsection{How do you work with a LLM?}
+\begin{itemize}
+    \item \textbf{Input Prompt}: A question, instruction, or statement.
+    \item \textbf{Tokenisation}: Prompt is broken into \textbf{tokens}; words or subwords; to interpret and process the input carefully.
+    \item \textbf{Contextual understanding}: Uses transformer architecture to analyze the prompt in context, to examine how words relate to each other.
+    \item \textbf{Prediction}: Predicts the next most likely token based on the prompt, training data, and statistical patterns learnt.
+    \item \textbf{Output generation}: Continues to predict tokens until reaches a stopping point, the output.
+\end{itemize}
+
+\subsection{Prompt}
+\begin{itemize}
+    \item A \textbf{prompt} is an input given to the Generative AI system to help it create a specific output.
+\end{itemize}
+
+\subsubsection{How to make a prompt work?}
+\begin{itemize}
+    \item \textbf{Clarity}: provides a clear task, good context, and avoids vague instructions.
+    \item \textbf{Relevance}: matches the goal to complete, speaks to the correct audience, and uses a format that fits the task.
+\end{itemize}
+
+\subsubsection{How to write a prompt?}
+\begin{itemize}
+    \item \textbf{Role}: How the AI should act as and expertise it must use 
+    \item \textbf{Context}: Background information 
+    \item \textbf{Task}: What you want the AI to do
+    \item \textbf{Output}: What the output should look like (format or structure)
+    \item \textbf{Constraints}: Limits, such as length, tone, or required content
+\end{itemize}
+
+\end{document}
