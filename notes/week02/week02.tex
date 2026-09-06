@@ -1,0 +1,112 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\title{Week 2}
+\author{Raadhikka Gupta}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Prompt Engineering}
+
+\subsection{Type of prompts}
+\begin{itemize}
+    \item \textbf{Direct Prompts}: clear and specific instructions; best for simple tasks when you know exactly what output you need the AI to generate.
+    \item \textbf{Open-ended Prompts}: diverse outputs without any constraints; for brainstorming, storytelling, or exploratory discussions.
+    \item \textbf{Task-specific Prompts}: precise, goal-oriented tasks; defined focus and have additional context or examples to help generate responses.
+\end{itemize}
+
+\subsection{Prompt Engineering Techniques}
+\begin{itemize}
+    \item \textbf{Zero-shot prompting}: response based on pre-trained knowledge without any examples or hints in the prompt; for simple, familiar, and straightforward tasks. 
+        \begin{itemize}
+            \item They can be less effective for tasks with domain knowledge, high understanding and specific outputs; they can have biases in training that can affect fairness and accuracy.
+        \end{itemize}
+    \item \textbf{One-shot prompting}: model is given a single example along with a task prompt to guide its response; for cases where collecting large amounts of data is impractical. 
+        \begin{itemize}
+            \item Add sample input and output, and the instruction in the prompt.
+            \item They can have biases because one example shape the output, and not work for complex tasks or tasks that need domain knowledge.
+        \end{itemize}
+    \item \textbf{Few-shot prompting}: model is given a few examples along with a task prompt to guide its performance; helps to find patterns and improve accuracy of response.
+        \begin{itemize}
+            \item Add sample inputs and outputs, and the instruction in the prompt.
+            \item They need to designed carefully and require domain knowledge to create effective examples so that the model can pick up the right things; more intensive as more examples increase processing time.
+        \end{itemize}
+    \item \textbf{Chain-of-thought prompting}: technique to enhance the output of LLM by guiding a model through a step-by-step reasoning process by using a coherent series of logical steps; useful for when prompting the model to perform tasks with logic or maths.
+        \begin{itemize}
+            \item Use a checklist and include these in the prompt: i) a clear task or problem statement, ii) a reasoning trigger or phrase that cues AI to reason, iii) a step-by-step format to organize the reasoning, iv) a format to summarize the final answer.
+            \item They are less effective for tasks with complex or branching logic as the model follows a liner reasoning chain; best with instructions are clear and guide effectively, as vague instructions = poor output.
+        \end{itemize}
+    \item \textbf{Meta prompting}: technique where model is asked to generate or improve its own prompt; to help enhance the quality, focus or consistency of output so that it will be more accurate, polished with the required tone, style or level of detail.
+        \begin{itemize}
+            \item Add instruction and guidance for refinement to the prompt.
+            \item They need well-structured guidance to refine them; add complexity and processing time as the model should analyze and modify a prompt before generating a response.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Mistakes to avoid when prompting}
+\begin{itemize}
+    \item Vague Prompts
+    \item Grammatical errors
+    \item Leading questions
+    \item Context gaps
+    \item Complex Prompts
+\end{itemize}
+
+\subsection{Best Practices}
+\begin{itemize}
+    \item Start with a clear objective
+    \item Provide context
+    \item Be specific and precise
+    \item Use a conversational tone
+    \item Refine and iterate
+\end{itemize}
+
+\section{Chatbots}
+\subsection{Types of Chatbots}
+\begin{itemize}
+    \item \textbf{Text-based}: queries only through text-based interactions; help in customer service handling various routine queries like order status, and detail updates.
+    \item \textbf{Voice-based}: spoken commands using speech recognition to interpret spoken query and responds verbally; can handle complex interactions and adapt to various accents and speech patterns.
+    \item \textbf{Virtual assistants}: provide a smooth and multifunctional UX; for a variety of tasks like answering emails, tracking orders, scheduling appointments, weather updates and controlling smart home devices.
+\end{itemize}
+
+\subsection{Conversational AI}
+\begin{itemize}
+    \item It enables machines to engage in human-like conversations with users.
+    \item Uses NLP, machine learning, and sentiment analysis.
+        \begin{itemize}
+            \item \textbf{Natural language Processing}: understand and interpret human language; to process the words and phrases you use, understand the meaning, and determine the context.
+            \item \textbf{Machine learning}: learn from data and improve its performance over time by learning from past interactions, recognize patterns, and improve responses over time.
+            \item \textbf{Sentiment analysis}: detect and understand the emotional tone; mood detector and enables to identify whether the message is positive, negative, or neutral.
+        \end{itemize}
+    \item This allows the chatbot to perform tasks like interpreting human language, remembering past conversations, incorporating context into their responses, and creating more intuitive and effective interactions.
+\end{itemize}
+
+\subsection{Designing Chatbots}
+\begin{itemize}
+    \item \textbf{User Interface}: designing the chatbot personality, and engagement
+        \begin{itemize}
+            \item \textbf{Chatbot personality}: giving it unique characteristics and communication style that aligns with the company identity; good one helps users connect with the chatbot and improves their experience.
+                \begin{itemize}
+                    \item \textbf{Appearance}: layout such as colours, buttons, and fonts.
+                    \item \textbf{Interaction}: user experience design; focusing on the user's interaction with the chatbot, the information that they have, and the information that they recieve.
+                    \item \textbf{Dialog}: responses for the chatbot; writing clear, helpful, and engaging text and matching the company brand with the tone and personality.
+                    \item \textbf{Learning}: the ability to adapt to different user actions; involves machine learning which helps the chatbot to interpret accurately and give personalized responses; with NLP and ML, you train the chatbot to interpret users' question and answers and respond.
+                \end{itemize}
+            \item \textbf{Engagement}: making the chatbot interactive and easy to use so that uses want to interact with it; easy to use, responsive, interactive, and reflection of the company brand.
+        \end{itemize}
+    \item \textbf{Meeting customer needs}
+        \begin{itemize}
+            \item \textbf{Define the goal}: what you want it to do; keeps the focus on a specific need 
+            \item \textbf{Choose the starting domain}: specific area to focus on initially; eg billing section of a website, so domain to integrate the chatbot to effectively.
+            \item \textbf{Choose the starting channel}: platform that is the most frequently visited by customers.
+            \item \textbf{Start small}: assigning a small, manageable task to the bot to test its functionality; how well it performs and gather feedback.
+            \item \textbf{Identify key topics}: focus on few most-asked specific questions or tasks that it will handle to ensure that it give the most accurate information for them.
+            \item \textbf{Identify relevant content sources}: take stock of all the helpful content such as product information, articles, and FAQs within the domain, and set up a quick search function.
+            \item \textbf{Plan for handoff}: when chatbot can not handle a request, plan to escalate to a human agent.
+        \end{itemize}
+    \item \textbf{Design flow logic}: how it reacts to each statement made during an exchange and proceeds to the next step; flow logic needs simple if-else statements, decision trees, complex algorithms, or machine learning-driven probabilistic logic.
+\end{itemize}
+
+\end{document}

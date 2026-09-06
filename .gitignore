@@ -3,3 +3,12 @@ notes/week01/*.fdb_latexmk
 notes/week01/*.fls
 notes/week01/*.log
 notes/week01/*.synctex.gz
+
+notes/week02/*.synctex.gz
+notes/week02/*.log
+notes/week02/*.fls
+notes/week02/*.fdb_latexmk
+notes/week02/*.aux
+notes/week02/*2
+notes/week02/*2.synctex(busy)
+notes/week02/*3
