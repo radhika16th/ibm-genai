@@ -1,0 +1,232 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\title{Week 3}
+\author{Raadhikka Gupta}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{AI Agents}
+\subsection{Introduction}
+\begin{itemize}
+    \item A system or program that is capable of autonomously performing tasks on behalf of a user or another system by designing its workflow and using available tools.
+    \item With a specific purpose in mind: affects how agent interprets data, makes decisions, and interacts with users.
+    \item Works autonomously because powered by advanced language models: help process human language and analyze problems to identify goal and the best way to achieve it.
+    \item AI Assistants: You prompt an LLM for an output; can be fine-tuned. 
+    \item AI Agents: You need to initially prompt the LLM to get it started, but doesn't require hand-holding, pretty proactive in making workflows; can be expensive as they can fall into rabbit holes.
+\end{itemize}
+
+\subsection{Characteristics}
+\begin{itemize}
+    \item \textbf{Autonomy}: complete tasks without human help; by analyzing user objectives and determine how to achieve them.
+    \item \textbf{Decision making}: collect and analyze data to make informed choices based on findings.
+    \item \textbf{Goal oriented}: work to achieve specific objectives by planning and prioritizing tasks, and then taking actions that align with outcome.
+    \item \textbf{Adaptability}: respond to change in environment or requirements by adjusting strategies and decisions accordingly.
+\end{itemize}
+
+\subsection{Components}
+\begin{itemize}
+    \item \textbf{Perception and input handling}: to sense and interpret data from its environment in real time and make its response more context aware.
+        \begin{itemize}
+            \item It interprets data input like user queries, sensor readings, system logs, or data from APIs.
+            \item Use techniques like NLP, speech recognition, or computer vision to get information.
+            \item Allows to interact naturally with user and integrate smoothly without human interaction.
+        \end{itemize}
+    \item \textbf{Planning and task decomposition}: to plan a course of action after interpreting a goal; outlining the steps or tasks required to achieve an objective or task decomposition into subtasks.
+        \begin{itemize}
+            \item To support agent in taking logical, goal-oriented actions and minimize errors and repetition.
+            \item To solve complex problem and recover from errors easier.
+            \item Helps improve time and resource management; as it is following a sequence.
+        \end{itemize}
+    \item \textbf{Memory}: facts, past interactions, or recurring patterns that allows the agent to store and retrieve information and provides continuity and context awareness making it feel personalized. 
+        \begin{itemize}
+            \item Includes context during one session and long term knowledge and user preferences over time.
+            \item Avoids repeating the same questions and provide faster, more relevant responses; more intelligent nad human-like experience.
+        \end{itemize}
+    \item \textbf{Reasoning and decision making}: to evaluate information, weigh options, and choose actions that best meet its goals.
+        \begin{itemize}
+            \item It uses logic-based rules, probabilistic models, or machine learning to analyze situations and make decisions.
+            \item Reasons through the problems as it reduce constant human help and helps the agent adapt its responses in different situations.
+            \item Making it more reliable and capable of handling complex inputs and changing user needs.
+        \end{itemize}
+    \item \textbf{Learning}: to improve its performance over time by analyzing data from past feedback or patterns in user behavior to refine how it interprets inputs, makes decisions, and responds to users.
+        \begin{itemize}
+            \item Powered by machine learning algorithms.
+            \item More it is used, more valuable by learning as it adapts to individual users, identify better ways to solve problems, and reduce errors over time.
+            \item Staying relevant and useful by evolving without reprogramming.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Agentic Architecture}
+\begin{itemize}
+    \item It is a blueprint of internal design of how an agent operates in its environment.
+    \item Defines its components, how they interact, and how the agent integrates with tools, data, and workflows to make decisions and act with minimal human input.
+    \item Performs the functions:
+        \begin{itemize}
+            \item Enable structured planning and task execution
+            \item Adapt to changing or unpredictable environments
+            \item Integrate real-time data and external tools
+            \item Support continuous adjustment and optimization
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Types of Agentic Architecture}
+\begin{itemize}
+    \item \textbf{Reactive Architecture}: simplest form: reacts to immediate stimuli from environment instead of using memory or predicting outcomes; strict sense-act loop: perceive something and reacts quickly based on predefined rules.
+    \item \textbf{Deliberative Architecture}: more advanced: uses memory, internal models, and reasoning to plan its actions before responding to its environment; filters different options before selecting the most suitable one.
+    \item \textbf{Hybrid Architecture}: combination: responds quickly to immediate changes while also using memory and planning for making longer-term decisions; quick responses + planned actions.
+\end{itemize}
+
+\subsection{Types of Agents}
+\begin{itemize}
+    \item \textbf{Simple reflex agents}: act based only on current input, using condition-action rules without memory or internal state.
+        \begin{itemize}
+            \item On a tight feedback loop; so if they sense a certain condition, they are triggered and start working toward a response to the condition, without any adaptability.
+            \item Good for situations with predictable, repetitive tasks but doesn't adapt or remember after the conversation ends.
+            \item It is \textbf{reactive}, have limited scope (straightforward tasks), fast response, and have lack of adaptability.
+            \item Useful for basic tasks in stable environments; pattern based automation like thermostat control.
+        \end{itemize}
+    \item \textbf{Model-based reflex agents}: uses current perceptions and stored information to update their internal model of the world and choose actions accordingly.
+        \begin{itemize}
+            \item Improve on simple reflex agents by using internal model that tracks both past and present states that enables them to make better decisions even without complete input, and adapt their responses more accurately to changing conditions.
+            \item It is an internal model (track changes and detect future states), contextual understanding, computational overhead (require many resources to maintain and update its internal state), improved performance.
+            \item Useful for when a system can't detect everything at once or information is temporarily missing; partially observable environment like robot navigating unknown spaces.
+            \item It is \textbf{reactive} and do not plan or optimize for the future, but better as interpret the surroundings and handle uncertainty better.
+        \end{itemize}
+    \item \textbf{Goal-based agents}: analyze actions, select the best one to achieve a goal, and use planning and reasoning to adapt to changing conditions.
+        \begin{itemize}
+            \item Evaluate their current state, plan possible actions, and use planning techniques to identify the best steps to reach a predefined goal by looking at future outcomes; they stay aligned even more as environment changes.
+            \item Architecture: perception and input handling, memory, planning and task decomposition, and reasoning and decision making, all driven by a user-defined goal, lead to an outcome. 
+            \item It is purposeful, strategic, prioritizing, and flexible.
+            \item Useful as it is strategic, plan and adjust behavior - more control; good for navigation or problem solving tasks, also for tasks that span multiple systems and where long-term impact matters.
+        \end{itemize}
+    \item \textbf{Utility-based agents}: select action sequences to achieve goal while maximizing rewards, choosing the action that provides the best result. 
+        \begin{itemize}
+            \item They analyze multiple factor such as the time it tasks, the cost involved, and the level of risk.
+            \item They use an advanced decision-making process or utility function to evaluate and compare outcome.
+                \begin{itemize}
+                    \item Utility function assigns a numeric value to each possible outcome, helping to determine the one with the highest value; making the most optimal decision.
+                \end{itemize}
+            \item It uses multi-criteria decision making (utility, cost, risk, and preferences), tradeoff analysis, subjectivity (calculate and retrieve user preferences), complex (require computational resources).
+            \item For personalized recommendations like product suggestions.
+        \end{itemize}
+    \item \textbf{Adaptive agents}: learn and evolve their action in response to changing environments; most flexible.
+        \begin{itemize}
+            \item They update their actions based on ongoing feedback, letting them respond to new challenges.
+            \item It might begin with limited performance, but improves as it gathers more data and refines its strategies; continuously refines its responses based on past interactions, making it more personalized and responsive to user's needs.
+            \item It is adaptive learning (from experience), flexible, generalized (recognition of patterns from specific situations and apply them to broader context), and maintains a balance between trying out new strategies with using known ones to optimize learning.
+            \item It is best for tasks where there is a need to adjust to new data or to unexpected situations, or when it's impossible to predict every possible scenario in advanced.
+            \item For dynamic, evolving environments like self-driving cars.
+        \end{itemize}
+\end{itemize}
+
+\subsection{AI Agent Workflows}
+\begin{itemize}
+    \item AI driven processes where the autonomous AI agent makes decisions, takes actions, and coordinate tasks with minimal human intervention.
+    \item A workflow provides a defined sequence of steps to guide what an agent show do, in which order, and under what conditions.
+    \item An agent workflow helps transform abstract goals into actionable logic and supports consistency in agents' actions and evolve over time.
+\end{itemize}
+
+\subsubsection{Structuring a workflow}
+\begin{itemize}
+    \item \textbf{Identify goal}: clear and direct goal so that the agent can complete tasks without any extra interpretation; no vague language; define measurable success; match the user's requested action for the agent to perform the correct task based on user input.
+    \item \textbf{Break the goal}: into small manageable tasks where each subtask represents a distinct action that directs the agent to the final goal; ensuring that it follows a logical flow, focused and avoid multiple actions into one subtask, only ones necessary to reach the goal.
+    \item \textbf{Define input sources and decision points}: define the input sources and decision points (\textbf{input sources} are data that it uses to make decisions and take actions; to identify the context of each tasks like user input, system data, environmental conditions; \textbf{decision points} are moments when it analyzes the inputs and makes a choice, like if-then or multiple choice); need to use accurate inputs, list all required input sources, handle varied inputs, test inputs.
+    \item \textbf{Connect to systems or tools}: integrate through API so that it calls that service; connect to compatible systems, handle system errors, and use stable, well-documented APIs.
+    \item \textbf{Specify the outputs or next actions}: such as delivering a response, updating a database, or triggering tasks in other systems; to define clear outputs, design for easy user actions, and validate system integration.
+\end{itemize}
+
+\subsection{AI Ethics}
+\begin{itemize}
+    \item A multidisciplinary field that studies how to optimize the beneficial impact of AI while reducing risks and adverse outcomes.
+    \item There are risks associated with the autonomy of AI Agents:
+        \begin{itemize}
+            \item \textbf{Data bias}: learn from historical data that can contain social, cultural, or institutional biases, that it can replicate or amplify them in its outputs.
+            \item \textbf{Redundant actions}: repetition leads to inefficient use of time and resources.
+            \item \textbf{Potential attack on an AI Agent's external resources}: as API and data sources are used to gather information, perform actions, or make decisions, they can be manipulated to degrade an agent's performance or compromise its actions.
+            \item \textbf{Hallucination in AI Agent}: some are made to perform actions using NLP, where if it misinterprets a command or attempts to execute invalid or non-existent commands, errors or unexpected outcomes are occur.
+            \item \textbf{Confidential information shared with tools}: when using third-party applications, they can share confidential information such as IP or personal identifiers.
+        \end{itemize}
+    \item There are five pillars of AI ethics:
+        \begin{itemize}
+            \item \textbf{Explainability}: transparent about what went into algorithm's recommendations.
+            \item \textbf{Fairness}: treat everyone equally when calibrated, countering human biases.
+            \item \textbf{Robustness}: actively defended from adversarial attacks, minimizing security risks, and enabling confidence in AI outcomes.
+            \item \textbf{Transparency}: users must be able to see how the AI works, evaluate its functionality, and comprehend its strengths and limitations. 
+            \item \textbf{Privacy}: prioritizing and safeguarding consumers' privacy and data rights, how data is used and protected.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Evaluating Agents}
+\begin{itemize}
+    \item Process of assessing and understanding an AI Agent's performance in executing tasks, making decisions, and interacting with users.
+    \item Ensure the agent does: makes correct decisions or recommendations, responds quickly and reliably, operates fairly and ethically, follows assigned tasks without any deviation, integrates effectively with other systems.
+    \item Key performance aspects to evaluate:
+        \begin{itemize}
+            \item \textbf{Traceability}: how well an agent follows steps and uses tools during task completion.
+                \begin{itemize}
+                    \item \textbf{Tool use}: how effectively an agent selects the correct tool for a task and uses the tool to accurately incorporate results into a meaningful output (Score).
+                    \item \textbf{Task Adherence}: how closely an agent's executed sequence of actions matches the expected task sequence; to validate the sequence of tasks and track if it doesn't skip the essential actions and check if no irrelevant or unauthorized steps are introduced.
+                \end{itemize}
+            \item \textbf{Output quality}: how well the agent produces correct and relevant responses that align with user expectations.
+                \begin{itemize}
+                    \item \textbf{User success}: to measure the percentage of users who successfully achieve their intended goal while interacting with an agent.
+                        \begin{equation}
+                            (\frac{successful \ tasks}{total \ tasks \ attempted}) \times 100 = user \ success
+                        \end{equation}
+                    \item \textbf{Accuracy}: to measure the overall correctness of an AI agent's responses or predictions by comparing how many of the total responses or prediction were correct; but doesn't reveal how well it detects spam.
+                        \begin{equation}
+                            (\frac{number \ of \ correct \ prediction}{total \ number \ of \ predictions}) \times 100 = accuracy
+                        \end{equation}
+                    \item \textbf{Precision}: to measure the quality of an AI agent's positive predictions; how many of the items an agent identifies as having a certain feature or meeting a certain condition are actually correct; positives = detected something true.
+                        \begin{equation}
+                            \frac{true\ positives}{(true\ positives + false\ positives)} = precision
+                        \end{equation}
+                    \item \textbf{Recall}: to measure an AI agent's ability to identify all positive cases correctly; helps detect how many of the total positives the agents successfully identifies as actual.
+                        \begin{equation}
+                            \frac{true\ positives}{(true\ positives + false\ positives)} = recall
+                        \end{equation}
+                \end{itemize}
+            \item \textbf{Operational efficiency}: how effectively an agent performs tasks with minimum delays or disruptions.
+                \begin{itemize}
+                    \item \textbf{Latency}: to measure the time an AI agent takes to produce an output or response after recieving an input; low latency = less time to generate a response; in complex data analysis or batch processing tasks, high latency score is ideal.
+                        \begin{equation}
+                            time\ of\ responses\ output\ -\ time\ of\ input\ received = latency
+                        \end{equation}
+                    \item \textbf{Uptime}: to measure the percentage of time an AI agent is available and responsive during a given period; high score = continuous accessible services such as chatbots or voice assistants.
+                        \begin{equation}
+                            \frac{total\ time\ -\ downtime}{total time} \times 100 = uptime
+                        \end{equation}
+                    \item \textbf{Error rate}: to measure an AI agent's ability to consistently perform its tasks correctly without crashing, making mistakes, or displaying unexpected results; how often it fails or generates incorrect responses; it shows the frequency of failures and helps development teams assess the reliability and quality; low score = more reliable and stable system.
+                        \begin{equation}
+                            \frac{number\ of\ failures}{total\ tasks} \times 100 = error\ rate
+                        \end{equation}
+                \end{itemize}
+        \end{itemize}
+\end{itemize}
+
+\subsection{AI Agent Deployment}
+\begin{itemize}
+    \item A process of releasing and integrating an AI or ML model into a production environment, where it can interact with users, systems, or other agents to perform specific tasks.
+    \item Deployment helps it to perform effectively and deliver the expected outcomes.
+\end{itemize}
+
+\subsubsection{Deployment Lifecycle}
+\begin{itemize}
+    \item \textbf{Predeployment}: after development and testing, integrated into the target environment, verified for security compliance, and configured for stable operation in production systems using metrics.
+    \item \textbf{Deployment}: for operational use within an organization in real-world conditions; must address all major concerns that impact for long-term performance.
+    \item \textbf{Postdeployment}: continuous monitoring and tracking to prevent the risk of outdated, biased, or inaccurate results; ongoing performance of how agents functions in a live environment, identifying area for improvement, and making updates.
+\end{itemize}
+
+\subsubsection{Updates}
+\begin{itemize}
+    \item \textbf{Training data and models}: as customer behaviors and market conditions evolve, it can require retraining.
+    \item \textbf{Agent logic and workflows}: when new streamlined processes are introduced, it must be updated to reflect new steps.
+    \item \textbf{Tool and API integration}: external systems might need to change over time; eg API format changed = agent breaks down UNLESS integration is reviewed and updated.
+    \item \textbf{Security settings and compliance rules}: regulations evolve so its permissions and logging mechanisms need regular updates to be compliant and secure.
+    \item \textbf{Triggers for updates}: scheduled reviews, either monthly or quarterly; triggered by specific events that impact its performance or relevance.
+    \item \textbf{Human oversight}: must review decisions from ethical standpoint; monitor performance and intervene when complex or unexpected situations arise; facilitate creation of feedback loops where decisions made are reviewed and adjusted based on outcomes. 
+\end{itemize}
+\end{document}

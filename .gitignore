@@ -12,3 +12,12 @@ notes/week02/*.aux
 notes/week02/*2
 notes/week02/*2.synctex(busy)
 notes/week02/*3
+
+notes/week03/*.synctex.gz
+notes/week03/*.log
+notes/week03/*.fls
+notes/week03/*.fdb_latexmk
+notes/week03/*.aux
+notes/week03/*2
+notes/week03/*2.synctex(busy)
+notes/week03/*3
