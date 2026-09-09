@@ -1,0 +1,43 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\title{Week 4}
+\author{Raadhikka Gupta}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Retrieval-Augmented Generation}
+\subsection{Introduction}
+\begin{itemize}
+    \item RAG is an architecture for optimizing the performance of LLMs by connecting them to external knowledge bases; help LLMs deliver more relevant responses at a higher quality.
+    \item Prompt $\rightarrow$ LLM $\rightarrow$ User Query $\rightarrow$ Information $\rightarrow$ LLM $\rightarrow$ User
+    \item Use cases for RAG:
+        \begin{itemize}
+            \item \textbf{Question Answering}: can retrieve the latest and most relevant information from sources before generating answer.
+            \item \textbf{Research Augmentation}: research accuracy is high as it combines historical data with recent trends to inform research findings.
+            \item \textbf{Content Generation}: improves factual accuracy and overall credibility of content by including credible citations.
+            \item \textbf{Domain-specific and proprietary data integration}: can retrieve information from internal cases without embedding it with training data and shared to public domain.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Benefits}
+\begin{itemize}
+    \item AI hallucination is a phenomenon in which an LLM detects patterns or objects that do not exist or are not visible to humans, leading to inaccurate or meaningless outputs.
+    \item To confirm that organizations receive current, complete, and accurate responses is to retrain or fine-tune the model with updated data; but it is costly and impractical, so RAG is a solution to keep expanding its knowledge without retaining constantly.
+    \item Without retraining, businesses can scale AI applications while reducing costs and resource demands.
+    \item Allows to integrate with online APIs, social media feeds, and search engines to get information from external sources and stay up-to-date with market trends, news, and customer sentiment.
+\end{itemize}
+
+\subsection{RAG Workflow}
+\begin{itemize}
+    \item It consists of steps that combine information extracted from knowledge sources to produce more informed, precise, and relevant responses.
+    \item \textbf{Prompt Creation}: submits a query that requires a response acting like a trigger that prompts RAG to get user input, determine the intent and scope of the information, and retrieve the relevant information.
+    \item \textbf{Information Search}: searches external knowledge sources (research papers, books, company databases, APIs, web articles) which allows the response to the user be beyond the training dataset and most recent.
+    \item \textbf{Information Retrieval}: filters and extracts the most relevant and credible information, making sure that only the high-quality data aligned with the user's query is selected.
+    \item \textbf{Prompt Augmentation}: enhances the original query by integrating the retrieved information by providing the model with additional context to generate a more accurate and detailed answer aligned with the user's intent.
+    \item \textbf{Response Generation}: uses enhanced information to generate a clear, accurate, and actionable response which is given to the user.
+\end{itemize}
+
+\end{document}
